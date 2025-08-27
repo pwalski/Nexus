@@ -4,10 +4,7 @@ from nexus.nexus_base.context_variables import (
     tracking_function_context,
     tracking_id_context,
 )
-from nexus.nexus_base.nexus_models import (
-    AgentEngineUsage,
-    db,
-)
+from nexus.nexus_base.nexus_models import AgentEngineUsage, db
 
 
 class TrackingManager:
@@ -21,7 +18,7 @@ class TrackingManager:
     def track_agent_engine_usage(
         id=None,
         name="Agent",
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         in_tokens=0,
         out_tokens=0,
         elapsed_time=0,

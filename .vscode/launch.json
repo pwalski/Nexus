@@ -16,16 +16,21 @@
       "type": "debugpy",
       "request": "launch",
       "module": "streamlit",
-      "args": ["run", "nexus/streamlit_main.py"],
-      "justMyCode": True
+      "args": ["run", "nexus/streamlit_main.py"]
     },
     {
       "name": "Python Debugger: FastAPI API",
       "type": "debugpy",
       "request": "launch",
       "module": "uvicorn",
-      "args": ["nexus.api.main:app", "--reload" ]
+      "args": ["nexus.api.main:app", "--reload"]
+    },
+    {
+      "name": "Python Debugger: Streamlit Module",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "${file}"]
     }
-
   ]
 }
