@@ -20,7 +20,7 @@ class GroqAgent(BaseAgent):
         self._chat_history = chat_history
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
         self.client.models.list()
-        self.model = "mixtral-8x7b-32768"
+        self.model = "mistral-saba-24b"
 
         self.max_tokens = 1024
         self.temperature = 0.7
@@ -31,10 +31,10 @@ class GroqAgent(BaseAgent):
             "model",
             {
                 "type": "string",
-                "default": "mixtral-8x7b-32768",
+                "default": "mistral-saba-24b",
                 "options": [
-                    "mixtral-8x7b-32768",
-                    "gemma-7b-it",
+                    "mistral-saba-24b",
+                    "gemma2-9b-it",
                     "llama2-70b-4096",
                 ],
             },
