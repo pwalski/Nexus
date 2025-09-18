@@ -21,7 +21,7 @@ class OpenAIAgentEngine(BaseAgentEngine):
         self._chat_history = chat_history
         self.client = OpenAI()
         self.client.models.list()
-        self.model = "gpt-4o"
+        self.model = "gpt-4.1-mini"
         self.max_tokens = 1024
         self.temperature = 0.7
         self.top_p = 1.0
@@ -34,13 +34,15 @@ class OpenAIAgentEngine(BaseAgentEngine):
                 "type": "string",
                 "default": "gpt-4o",
                 "options": [
-                    "gpt-4o",
-                    "gpt-4-1106-preview",
-                    "gpt-3.5-turbo-1106",
-                    "gpt-4-0613",
                     "gpt-4",
-                    "gpt-4-0125-preview",
-                    "gpt-4-turbo-preview",
+                    "gpt-4o",
+                    "gpt-4o-mini",
+                    "gpt-4.1",
+                    "gpt-4.1-mini",
+                    "gpt-4.1-nano",
+                    "gpt-5",
+                    "gpt-5-mini",
+                    "gpt-5-nano",
                 ],
             },
         )

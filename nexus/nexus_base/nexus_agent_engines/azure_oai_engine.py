@@ -25,7 +25,7 @@ class AzureOpenAIAgentEngine(BaseAgentEngine):
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
         )
         self.client.models.list()
-        self.model = "gpt-4-v0613"
+        self.model = "gpt-4.1-mini"
 
         self.max_tokens = 1024
         self.temperature = 0.7
@@ -36,12 +36,17 @@ class AzureOpenAIAgentEngine(BaseAgentEngine):
             "model",
             {
                 "type": "string",
-                "default": "gpt-4-v0613",
+                "default": "gpt-4.1-mini",
                 "options": [
-                    "gpt-4-v0613",
-                    "gpt-4-32k-v0613",
-                    "gpt-35-turbo-v0613",
-                    "gpt-4-v1106-Preview",
+                    "gpt-4",
+                    "gpt-4o",
+                    "gpt-4o-mini",
+                    "gpt-4.1",
+                    "gpt-4.1-mini",
+                    "gpt-4.1-nano",
+                    "gpt-5",
+                    "gpt-5-mini",
+                    "gpt-5-nano",
                 ],
             },
         )

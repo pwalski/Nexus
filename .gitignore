@@ -175,3 +175,4 @@ nexus.db*
 logs.txt
 /logs
 /agent_working_folder
+logs/
